@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script>window.playlist = JSON.parse(`<%-video%>`)</script>
+    <title><%=show%></title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="/static/css/video.css">
+    <script defer src="/static/scripts/video.js"></script>
+  </head>
+  <body>
+    <div id="vWrap">
+      <video id="vVid"></video>
+      <button id="vPlay" disabled><span id="vPlayIco" class="material-icons">play_arrow</span></button>
+      <div id="vCron"><span id="vNow"></span> / <span id="vTime"></span></div>
+      <input id="vSeek" type="range" min="0" value="0" step="1" disabled>
+      <span id="vVolIco" class="material-icons">volume_up</span>
+      <input id="vVolume" type="range" min="0" max="1" value="1" step="0.1" disabled>
+      <button id="full"><span class="material-icons">fullscreen</span></button>
+      <div id="vList"></div>
+    </div>
+  </body>
+</html>
